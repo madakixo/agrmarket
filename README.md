@@ -1,20 +1,35 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
-# Run and deploy your AI Studio app
+# AgriMarket - Fresh Connect
 
-This contains everything you need to run your app locally.
+A sophisticated agricultural marketplace connecting farmers directly with buyers.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1REjemnMlQKvJHmpJrOSeGm-hWvG8StJE
+## 🚀 Local Development
 
-## Run Locally
+### 1. Frontend (React + Gemini API)
+- **Install deps:** `npm install`
+- **Configure Env:** Create `.env` and add `VITE_API_KEY=your_gemini_key`
+- **Run:** `npm run dev`
 
-**Prerequisites:**  Node.js
+### 2. Backend (FastAPI + PostgreSQL)
+- **Environment:** `python -m venv venv && source venv/bin/activate`
+- **Install deps:** `pip install -r requirements.txt`
+- **Database:** Ensure PostgreSQL with PostGIS is running.
+- **Run:** `uvicorn app.main:app --reload`
 
+## 🌍 Deployment
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Frontend (Vercel)
+1. Push to GitHub.
+2. Link to Vercel.
+3. Add `API_KEY` to Environment Variables.
+
+### Backend (Railway/Render)
+1. Provision a PostgreSQL + PostGIS database.
+2. Deploy FastAPI app.
+3. Set `DATABASE_URL` and `CLOUDINARY_URL` in environment.
+
+## 🤖 AI Features
+This app uses **Gemini 3 Flash** for:
+- Auto-generating listing descriptions.
+- Market price suggestions.
+- Agricultural advisory chat for farmers.
